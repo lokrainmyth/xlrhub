@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XLR HUB — Track 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body>
+  <main class="device-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">X</span><span>XLR HUB</span></div>
+      <div class="topbar-meta"><span>TRACK 1</span><span class="status"><i></i> READY</span></div>
+    </header>
+
+    <section class="device-face">
+      <div class="screw screw-tl"></div><div class="screw screw-tr"></div><div class="screw screw-bl"></div><div class="screw screw-br"></div>
+      <div class="display-row">
+        <div class="display-panel">
+          <div class="display-label">NOW PLAYING</div>
+          <div class="display-title">TRACK 1</div>
+          <div class="display-wave" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="time"><span id="elapsed">00:00</span><span>03:42</span></div>
+        </div>
+        <div class="master-section">
+          <div class="section-label">MASTER</div>
+          <div class="meter"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
+          <div class="knob knob-large" data-knob="master"><span></span></div>
+          <div class="knob-caption">LEVEL <em id="masterValue">78</em></div>
+        </div>
+      </div>
+
+      <div class="transport">
+        <button class="transport-btn" id="stopBtn" aria-label="Stop">■</button>
+        <button class="play-btn" id="playBtn" aria-label="Play">▶</button>
+        <button class="transport-btn" id="resetBtn" aria-label="Reset">↺</button>
+        <div class="transport-line"><span id="transportState">STOPPED</span><span>44.1 KHZ / STEREO</span></div>
+      </div>
+
+      <div class="mixer-grid" id="mixerGrid"></div>
+
+      <div class="effects-row">
+        <div class="section-label">COLOR / FX</div>
+        <div class="effect-bank" id="effectBank"></div>
+        <div class="footer-note">LOAD STEMS INTO <code>/assets</code><br>SEE README FOR FILE NAMES</div>
+      </div>
+    </section>
+    <footer class="page-footer"><span>AN INTERACTIVE LISTENING DEVICE</span><span>V0.1 / XLRHUB</span></footer>
+  </main>
+  <script src="src/app.js"></script>
+</body>
+</html>
